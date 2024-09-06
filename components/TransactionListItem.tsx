@@ -26,30 +26,27 @@ export default function TransactionListItem({
     const emoji = categoryEmojies[categoryInfo?.name ?? "Default"];
 
     return (
-        <Card>
-        <View style={styles.row}>
-          <View style={{ width: "40%", gap: 3 }}>
-
-            <Amount
-                amount={transaction.amount}
-                color={color}
-                iconName={iconName}
-            />
-
-            <CategoryItem
-                categoryColor={categoryColor}
-                categoryInfo={categoryInfo}
-                emoji={emoji}
-            />
-        
-            <TransactionInfo
-                date={transaction.date}
-                description={transaction.description}
-                id={transaction.id}
-            />
-          </View>
+      <Card>
+      <View style={styles.row}>
+        <View style={{ width: "40%", gap: 3 }}>
+          <Amount
+            amount={transaction.amount}
+            color={color}
+            iconName={iconName}
+          />
+          <CategoryItem
+            categoryColor={categoryColor}
+            categoryInfo={categoryInfo}
+            emoji={emoji}
+          />
         </View>
-      </Card>
+        <TransactionInfo
+          date={transaction.date}
+          description={transaction.description}
+          id={transaction.id}
+        />
+      </View>
+    </Card>
 
     )
 }
@@ -119,7 +116,7 @@ function TransactionInfo({
           numberOfLines={1}
           style={[styles.amount, { maxWidth: "80%" }]}
         >
-          ${amount}
+          BIF {amount}
         </AutoSizeText>
       </View>
     );

@@ -18,13 +18,19 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "budget.app"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-asset"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "023347bb-093d-47ea-af74-f849aeb298e6"
+      }
+    }
   }
 }
